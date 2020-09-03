@@ -1,0 +1,61 @@
+{
+  "name": "moon",
+  "version": "0.0.2",
+  "description": "Eaglr crappy test",
+  "main": "src/index.js",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-builder": "^22.6.1"
+  },
+  "build": {
+    "appId": "com.exuberant.moon",
+    "productName": "Moon",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "aexhell",
+        "repo": "eaglr-desktop"
+      }
+    ],
+    "win": {
+      "asar": true,
+      "target": "nsis",
+      "icon": "src/media/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "src/media/icon.ico",
+      "installerHeaderIcon": "src/media/icon.ico",
+      "deleteAppDataOnUninstall": true,
+      "allowToChangeInstallationDirectory": true,
+      "include": "installer.nsh",
+      "oneClick": false
+    },
+    "mac": {
+      "category": "vlogging"
+    }
+  },
+  "scripts": {
+    "start": "electron src/index.js",
+    "pack": "electron-builder",
+    "publish": "build -p always"
+  },
+  "author": "Aexhell",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aexhell/eaglr-desktop.git"
+  },
+  "dependencies": {
+    "@cycjimmy/h5-video-player": "^2.1.0",
+    "discord-rich-presence": "0.0.8",
+    "electron-log": "^4.2.4",
+    "electron-updater": "^4.3.4",
+    "fs": "0.0.1-security",
+    "mousetrap": "^1.6.5",
+    "path": "^0.12.7",
+    "superagent": "^6.1.0",
+    "tailwindcss-transitions": "^2.2.0",
+    "update-electron-app": "^1.5.0",
+    "url": "^0.11.0"
+  }
+}
