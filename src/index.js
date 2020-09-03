@@ -16,7 +16,7 @@ logger.info('App starting...');
 let win;
 
 client.updatePresence({
-  state: 'Navegando',
+  state: 'Navegando por la web',
   startTimestamp: Date.now(),
   largeImageKey: 'large',
   instance: true,
