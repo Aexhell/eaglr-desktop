@@ -1,6 +1,6 @@
 require('update-electron-app')({
   repo: 'Aexhell/eaglr-desktop',
-  updateInterval: '1 minute',
+  updateInterval: '1 hour',
   logger: require('electron-log')
 });
 
@@ -9,6 +9,7 @@ const electron = require('electron');
 const { dialog, Menu, shell, app, BrowserWindow } = electron;
 const path = require('path');
 const url = require('url');
+const logger = require("electron-log");
 const client = require("discord-rich-presence")('750893006403403866');
 const superagent = require("superagent");
 
@@ -16,7 +17,7 @@ logger.info('App starting...');
 let win;
 
 client.updatePresence({
-  state: 'Navegando por la web',
+  state: 'Navegando',
   startTimestamp: Date.now(),
   largeImageKey: 'large',
   instance: true,
