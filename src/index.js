@@ -1,6 +1,6 @@
 require('update-electron-app')({
   repo: 'Aexhell/eaglr-desktop',
-  updateInterval: '1 hour',
+  updateInterval: '1 minute',
   logger: require('electron-log')
 });
 
