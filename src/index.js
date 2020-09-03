@@ -40,7 +40,6 @@ function createWindow() {
   // win.loadFile("../src/html/index.html");
   win.loadURL("https://eaglr.net/");
   win.setMinimumSize(980, 620);
-  win.webContents.openDevTools();
   win.once('ready-to-show', () => {
     win.show();
   });
